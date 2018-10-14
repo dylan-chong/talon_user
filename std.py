@@ -4,14 +4,14 @@ import string
 
 # If you're used to VC alphabet, use the line below instead
 #alpha_alt = 'arch brov char dell etch fomp goof hark ice jinks koop lug mowsh nerb ork pooch quash rosh souk teek unks verge womp trex yang zooch'.split()
-alpha_alt = 'air bat cap drum each fine gust harp sit jury crunch look made night odd pit quench red sun trap urge vest whale plex yank zip'.split()
+alpha_alt = 'air bat cap drum each fine gust harp sit jury crunch look made need odd pit quench red sun trap urge vest whale plex yank zip'.split()
 
 alnum = list(zip(alpha_alt, string.ascii_lowercase)) + \
     [(str(i), str(i)) for i in range(0, 10)]
 
 alpha = {}
 alpha.update(dict(alnum))
-alpha.update({'ship %s' % word: letter for word,
+alpha.update({'big %s' % word: letter for word,
               letter in zip(alpha_alt, string.ascii_uppercase)})
 
 # TODO replace this ugly stuff with something from here https://github.com/dwighthouse/unofficial-talonvoice-docs/blob/master/docs/UserScriptOverview.md
