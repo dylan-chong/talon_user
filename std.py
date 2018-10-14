@@ -14,11 +14,17 @@ alpha.update(dict(alnum))
 alpha.update({'ship %s' % word: letter for word,
               letter in zip(alpha_alt, string.ascii_uppercase)})
 
-alpha.update({'control %s' % k: Key('ctrl-%s' % v) for k, v in alnum})
-alpha.update({'command %s' % k: Key('cmd-%s' % v) for k, v in alnum})
-alpha.update({'command shift %s' % k: Key('ctrl-shift-%s' % v)
-              for k, v in alnum})
-alpha.update({'alt %s' % k: Key('alt-%s' % v) for k, v in alnum})
+# TODO replace this ugly stuff with something from here https://github.com/dwighthouse/unofficial-talonvoice-docs/blob/master/docs/UserScriptOverview.md
+alpha.update({'con %s' % k: Key('ctrl-%s' % v) for k, v in alnum})
+alpha.update({'con big %s' % k: Key('ctrl-shift-%s' % v) for k, v in alnum})
+alpha.update({'con altering %s' % k: Key('ctrl-alt-%s' % v) for k, v in alnum})
+alpha.update({'cherrio %s' % k: Key('cmd-%s' % v) for k, v in alnum})
+alpha.update({'cherrio big %s' % k: Key('cmd-shift-%s' % v) for k, v in alnum})
+alpha.update({'cherrio altering big %s' % k: Key('cmd-alt-shift-%s' % v) for k, v in alnum})
+alpha.update({'cherrio altering big %s' % k: Key('cmd-alt-shift-%s' % v) for k, v in alnum})
+alpha.update({'altering %s' % k: Key('alt-%s' % v) for k, v in alnum})
+alpha.update({'altering big %s' % k: Key('alt-%s' % v) for k, v in alnum})
+alpha.update({'mash mod %s' % k: Key('ctrl-shift-cmd-%s' % v) for k, v in alnum})
 
 mapping = {
     'semicolon': ';',
