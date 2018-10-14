@@ -69,25 +69,17 @@ def rot13(i, word, _):
     return out
 
 formatters = {
-    'dunder': (True, lambda i, word, _: '__%s__' % word if i == 0 else word),
-    'cram':  (True, lambda i, word, _: word if i == 0 else word.capitalize()),
-    'pathway':  (True, lambda i, word, _: word if i == 0 else '/'+word),
-    'dotsway':  (True, lambda i, word, _: word if i == 0 else '.'+word),
-    'snake':  (True, lambda i, word, _: word if i == 0 else '_'+word),
-    'yellsnik':  (True, lambda i, word, _: word.capitalize() if i == 0 else '_'+word.capitalize()),
-    'smash':  (True, lambda i, word, _: word),
-    'dollcram': (True, lambda i, word, _: '$'+word if i == 0 else word.capitalize()),
-    'champ': (True, lambda i, word, _: word.capitalize() if i == 0 else " "+word),
-    'lowcram': (True, lambda i, word, _: '@'+word if i == 0 else word.capitalize()),
-    'criff': (True, lambda i, word, _: word.capitalize()),
-
-    'spine':  (True, lambda i, word, _: word if i == 0 else '-'+word),
-    'title':  (False, lambda i, word, _: word.capitalize()),
-    'yeller': (False, lambda i, word, _: word.upper()),
-    'dub-string': (False, surround('"')),
-    'string': (False, surround("'")),
-    'padded': (False, surround(" ")),
-    'rot thirteen':  (False, rot13),
+    'natword': (True, lambda i, word, _: word if i == 0 else ' '+word),
+    'spaywid': (True, lambda i, word, _: word+' '),
+    'camel': (True, lambda i, word, _: word if i == 0 else word.capitalize()),
+    'relpath': (True, lambda i, word, _: word if i == 0 else '/'+word),
+    'dotword': (True, lambda i, word, _: word if i == 0 else '.'+word),
+    'score': (True, lambda i, word, _: word if i == 0 else '_'+word),
+    'upper-score': (True, lambda i, word, _: (word if i == 0 else '_'+word).upper()),
+    'jumble': (True, lambda i, word, _: word),
+    'sentence': (True, lambda i, word, _: word.capitalize() if i == 0 else " "+word),
+    'proper': (True, lambda i, word, _: word.capitalize()),
+    'title': (False, lambda i, word, _: word.capitalize()),
 }
 
 
