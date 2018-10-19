@@ -6,7 +6,7 @@ keymap = {
     'quit': Key('esc'),
 
     'enter': Key('enter'),
-    'slipper': Key('backspace'),
+    'delete': Key('backspace'),
     'spunk': Key('delete'),
 
     'tab': Key('tab'),
