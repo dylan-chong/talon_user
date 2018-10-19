@@ -20,6 +20,7 @@ keymap = {
     'plus': '+',
     'equals': '=',
     'tilde': '~',
+    'backtick': Key('backtick'), # TODO NEXT this doesnt work
     'bang': '!',
     'dollar': '$',
     'underscore': '_',
